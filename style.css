@@ -43,6 +43,13 @@ button {
     flex-grow: 0;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 500px;
+    margin-bottom: 10px;
+}
+
 .logo_container {
     position: absolute;
     width: 120px;
@@ -70,6 +77,13 @@ button {
 
 .rules_text {
     margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
 }
 
 .exclamation_circle {
@@ -153,6 +167,20 @@ button {
     text-align: center;
     color: #495057;
     margin: 0;
+}
+
+.attribution {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    text-align: center;
+    color: #495057;
+}
+.attribution a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
 }
 
 :root {
