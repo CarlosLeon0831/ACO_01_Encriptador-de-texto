@@ -24,7 +24,8 @@ input {
 button {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     padding: 24px;
     gap: 8px;
 
@@ -116,6 +117,19 @@ footer {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
+}
+
+.desencriptar {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--accent);
+
+background: #D8DFE8;
+border: 1px solid #0A3871;
+border-radius: 24px;
+
 }
 
 .output_container {
