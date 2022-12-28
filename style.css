@@ -1,9 +1,26 @@
+* {
+    border: 1px solid red;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
 body {
     background: var(--bg-color);
     position: relative;
-    width: 1440px;
-    height: 1024px;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
 
 input {
     position: absolute;
