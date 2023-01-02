@@ -13,7 +13,7 @@
     <div class="logo_container">
         <img src="./images/logo.png" alt="Logo Allura">
     </div>
-    <input type="text" placeholder="Ingrese el texto aqui" class="input">
+    <input type="text" placeholder="Ingrese el texto aqui" class="input" id="input">
     <div class="rules_container">
         <img src="./images/bi_exclamation-circle-fill.png" alt="Circulo negro con simbolo de exclamacion" class="exclamation_circle">
         <p class="rules_text">Solo letras minúsculas y sin acento</p>
@@ -22,16 +22,15 @@
         <button class="encriptar" id="encrypt">Encriptar</button>
         <button class="desencriptar" id="decrypt">Desencriptar</button>
     </div>
-    <div class="output_container__empty">
-        <p class="output_ContainerText"></p>
+    <div class="output_container__empty" id="empty">
         <img src="./images/Muñeco.png" alt="Persona sujetando una lupa" class="munieco">
         <div class="output__NotFound_text_container">
             <h2 class="output__NotFound_title">Ningún mensaje fue encontrado</h2>
             <p class="output__NotFound_text">Ingresa el texto que desees encriptar o desencriptar.</p>
         </div>
     </div>
-    <div class="output_container__full">
-        <p class="outputText">fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!</p>
+    <div class="output_container__full" id="full">
+        <p class="outputText" id="output"></p>
         <button class="copiar">Copiar</button>
     </div>
 </main>

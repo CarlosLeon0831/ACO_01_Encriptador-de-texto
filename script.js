@@ -1,95 +1,40 @@
-/*
-    Pseudocode
-    Encrypt/Decript function:
-    Imput text
-    Click to either encrypt or decrypt
-    save input text
-    if (clicked on encrypt) {
-        look for vocal letters and change them to their respective keys
-    }
-    if (clicked on decrypt) {
-        look for encryption keys and change them to their respective letters
-    } 
-    return output text
-    show encrypted/decrypted text on output zone
-*/
-const btnEncrypt = document.querySelector('#encrypt');
-const btnDecrypt = document.querySelector('#decrypt');
+const btnEncrypt = document.getElementById('encrypt');
+const btnDecrypt = document.getElementById('decrypt');
+const emptyContainer = document.getElementById('empty');
+const fullContainer = document.getElementById('full');
+const output = document.getElementById('output');
 
-btnEncrypt.addEventListener("click", encrypt);
-btnDecrypt.addEventListener("click", decrypt);
+function encrypt(str) {
+    str = str.toLowerCase();
+    return str.replace(/e/g, "enter")
+      .replace(/i/g, "imes")
+      .replace(/a/g, "ai")
+      .replace(/o/g, "ober")
+      .replace(/u/g, "ufat");
+}
+ 
+function decrypt(str) {
+    str = str.toLowerCase();
+    return str.replace(/enter/g, "e")
+      .replace(/imes/g, "i")
+      .replace(/ai/g, "a")
+      .replace(/ober/g, "o")
+      .replace(/ufat/g, "u");
+}
 
-encrypt = message => {
-    let encryptedMessage;
+btnEncrypt.addEventListener("click", function() {
+    emptyContainer.style.visibility = "hidden";
+    fullContainer.style.visibility = "visible";
+    const input = document.getElementById("input").value;
+    const encrypted = encrypt(input);
+    output.textContent = encrypted;
+});
 
-    const messageArr = message.split("");
-    
-    let encryptedMessageArr = [];
-
-    for (i = 0; i < messageArr.length; i++) {
-        let letter;
-        switch(messageArr[i]) {
-            case "a":
-                letter = "ai";
-                break;
-            case "e":
-                letter = "enter";
-                break;
-            case "i":
-                letter = "imes";
-                break;
-            case "o":
-                letter = "ober";
-                break;
-            case "u":
-                letter = "ufat";
-                break;
-            default:
-                letter = messageArr[i];
-                break;
-        }
-
-        encryptedMessageArr.push(letter);
-    }
-
-    encryptedMessage = encryptedMessageArr.join("");
-    return encryptedMessageArr;
-};
-
-decrypt = message => {
-    let decryptedMessage;
-
-    const messageArr = message.split("");
-    
-    let decryptedMessageArr = [];
-
-    for (i = 0; i < messageArr.length; i++) {
-        let letter;
-        switch(messageArr[i]) {
-            case "ai":
-                letter = "a";
-                break;
-            case "enter":
-                letter = "e";
-                break;
-            case "imes":
-                letter = "i";
-                break;
-            case "ober":
-                letter = "o";
-                break;
-            case "ufat":
-                letter = "u";
-                break;
-            default:
-                letter = messageArr[i];
-                break;
-        }
-
-        decryptedMessageArr.push(letter);
-    }
-
-    decryptedMessage = decryptedMessageArr.join("");
-    return decryptedMessageArr;
-};
+btnDecrypt.addEventListener("click", function() {
+    emptyContainer.style.visibility = "hidden";
+    fullContainer.style.visibility = "visible";
+    const input = document.getElementById("input").value;
+    const decrypted = decrypt(input);
+    output.textContent = decrypted;
+});
 
