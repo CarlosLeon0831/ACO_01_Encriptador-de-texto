@@ -1,6 +1,7 @@
-// Get the encrypt and decrypt buttons and the empty and full containers
+// Get the encrypt, decrypt and copy buttons and the empty and full containers
 const btnEncrypt = document.getElementById('encrypt');
 const btnDecrypt = document.getElementById('decrypt');
+const btnCopy = document.getElementById('copy');
 const emptyContainer = document.getElementById('empty');
 const fullContainer = document.getElementById('full');
 const output = document.getElementById('output');
@@ -48,5 +49,11 @@ btnDecrypt.addEventListener("click", function() {
     const input = document.getElementById("input").value;
     const decrypted = decrypt(input);
     output.textContent = decrypted;
+});
+
+// Add a click event listener to the copy button to copy output text to clipboard
+btnCopy.addEventListener("click", function() {
+    let copyText = document.getElementById('output').textContent;
+    navigator.clipboard.writeText(copyText);
 });
 
