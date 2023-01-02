@@ -55,5 +55,6 @@ btnDecrypt.addEventListener("click", function() {
 btnCopy.addEventListener("click", function() {
     let copyText = document.getElementById('output').textContent;
     navigator.clipboard.writeText(copyText);
+    alert('Texto copiado al portapapeles');
 });
 

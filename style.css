@@ -1,6 +1,6 @@
-/* * {
+* {
     border: 1px solid red;
-} */
+}
 
 html,
 body {
@@ -227,6 +227,7 @@ footer {
     line-height: 150%;
     color: #495057;
     margin: 0;
+    word-wrap: break-word;
 }
 
 .copiar {
@@ -264,4 +265,27 @@ footer {
 :root {
     --bg-color: #F3F5FC;
     --accent: #0A3871;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        position: relative;
+        max-width: 768px;
+        height: 100%;
+    }
+
+    .logo_container {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 31px;
+        height: 48px;
+        left: 40px;
+        top: 73.42px;
+    }
+
+    .logo {
+        width: 31.09px;
+        height: 50.58px;
+    }
 }
