@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
     <title>Encriptador de Texto</title>
-</head>
-<body>
-<main>
-    <div class="logo_container">
-        <img src="./images/logo.png" alt="Logo Allura" class="logo">
-    </div>
-    <textarea placeholder="Ingrese el texto aqui" class="input" id="input"></textarea>
-    <div class="rules_container">
-        <img src="./images/bi_exclamation-circle-fill.png" alt="Circulo negro con simbolo de exclamacion" class="exclamation_circle">
-        <p class="rules_text">Solo letras minúsculas y sin acento</p>
-    </div>
-    <div class="button_container">
-        <button class="encriptar" id="encrypt">Encriptar</button>
-        <button class="desencriptar" id="decrypt">Desencriptar</button>
-    </div>
-    <div class="output_container__empty" id="empty">
-        <img src="./images/Muñeco.png" alt="Persona sujetando una lupa" class="munieco">
-        <div class="output__NotFound_text_container">
+  </head>
+  <body>
+    <div class="flex-container">
+      <main>
+        <div class="flex-item--logo">
+        <div class="logo_container">
+          <img src="./images/logo.png" alt="Logo Allura" class="logo" />
+        </div>
+        </div>
+        <div class="flex-item--input">
+        <textarea placeholder="Ingrese el texto aqui" class="input" id="input"></textarea>
+        <div class="rules_container">
+          <img src="./images/bi_exclamation-circle-fill.png" alt="Circulo negro con simbolo de exclamacion" class="exclamation_circle" />
+          <p class="rules_text">Solo letras minúsculas y sin acento</p>
+        </div>
+        <div class="button_container">
+          <button class="encriptar" id="encrypt">Encriptar</button>
+          <button class="desencriptar" id="decrypt">Desencriptar</button>
+        </div>
+        </div>
+        <div class="flex-item--output">
+        <div class="output_container__empty" id="empty">
+          <img src="./images/Muñeco.png" alt="Persona sujetando una lupa" class="munieco" />
+          <div class="output__NotFound_text_container">
             <h2 class="output__NotFound_title">Ningún mensaje fue encontrado</h2>
             <p class="output__NotFound_text">Ingresa el texto que desees encriptar o desencriptar.</p>
+          </div>
         </div>
-    </div>
-    <div class="output_container__full" id="full">
-        <p class="outputText" id="output"></p>
-        <button class="copiar" id="copy">Copiar</button>
-    </div>
-</main>
-    <footer>
-        <div class="attribution">
-            Challenge by <a href="https://www.aluracursos.com/" target="_blank">Allura ONE</a>. 
-            Coded by <a href="https://github.com/CarlosLeon0831" target="_blank">Carlos R. Leon</a>.
+        <div class="output_container__full" id="full">
+          <p class="outputText" id="output"></p>
+          <button class="copiar" id="copy">Copiar</button>
         </div>
-    </footer>
-</body>
+        </div>
+      </main>
+      <footer>
+        <div class="attribution">Challenge by
+          <a href="https://www.aluracursos.com/" target="_blank">Allura ONE</a>.
+          Coded by
+          <a href="https://github.com/CarlosLeon0831" target="_blank">Carlos R. Leon</a>.
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

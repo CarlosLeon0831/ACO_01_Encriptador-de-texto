@@ -32,8 +32,8 @@ function decrypt(str) {
 // Add a click event listener to the encrypt button to run the encrypt function and update the output
 btnEncrypt.addEventListener("click", function() {
      // Hide the empty container and show the full container
-    emptyContainer.style.visibility = "hidden";
-    fullContainer.style.visibility = "visible";
+    emptyContainer.style.display = "none";
+    fullContainer.style.display = "block";
     // Get the value of the input field
     const input = document.getElementById("input").value;
      // Encrypt the input value
